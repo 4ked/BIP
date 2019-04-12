@@ -17,8 +17,6 @@ Ahoy! This is the Repository for Three(02) Capital's Backtesting System for Inte
 
 Backtesting is the research process of applying a trading strategy idea to historical data in order to ascertain past performance. In particular, a backtester makes no guarantee about the future performance of the strategy. They are however an essential component of the strategy pipeline research process, allowing strategies to be filtered out before being placed into production.
 
------
-
 ## The Meat and Potatoes
 
 ### **Packages**
@@ -47,8 +45,6 @@ Backtesting is the research process of applying a trading strategy idea to histo
 - Arbitrary matrix data (homogeneously typed or heterogeneous) with row and column labels
 - Any other form of observational / statistical data sets. The data actually need not be labeled at all to be placed into a pandas data structure
 
-
-
 ### **Libraries**
 
 **_SciPy_**: provides many user-friendly and efficient numerical routines such as routines for numerical integration and optimization.
@@ -73,14 +69,10 @@ Backtesting is the research process of applying a trading strategy idea to histo
 
 **_Textwrap_**: formats paragraphs of text to fit a given screen width.
 
------
-
 ## Usage
 
-Talkin bout how you use it
-
------
+Well considering it doesn't work...
 
 ## Credits
 
-**Built by yours truly, papa CDO**
+**Built by yours truly, 4ked**

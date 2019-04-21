@@ -2,16 +2,14 @@
 
 Ahoy! This platform is designed to be a simple solution for backtesting python trading algorithms via zipline-live with Interactive Brokers integration. While the project is constantly evolving, click [here](https://github.com/orgs/three-02/projects/1) for insight into the status of the project.
 
-It is also worth noting that this is only a command line interface. While there are probably more complex solutions elsewhere, this is as close to pkug-and-play as you can get to test your trading algorithms without the hastle of setting up more complex infrastructure.
+It is also worth noting that this is only a command line interface. While there are probably more complex solutions elsewhere, this is as close to plug-and-play as you can get to test your trading algorithms without the hastle of setting up more complex infrastructure.
 
 ## Contents
 
 - [A Brief Introduction](#so-what-is-backtesting)
-- [What's this thing built on?](#the-meat-and-potatoes)
-    - [Packages](#packages)
-    - [Libraries](#libraries)
-    - [Modules](#modules)
-- [Usage](#usage)
+- [What makes BIP different?](#the-basics)
+- [Uses and Functions](#usage)
+- [Setup](#setup)
 - [Credits](#credits)
 
 
@@ -19,67 +17,43 @@ It is also worth noting that this is only a command line interface. While there 
 
 Backtesting is the research process of applying a trading strategy idea to historical data in order to ascertain past performance. In particular, a backtester makes no guarantee about the future performance of the strategy. They are however an essential component of the strategy pipeline research process, allowing strategies to be filtered out before being placed into production.
 
-## The Meat and Potatoes
+## The Basics
 
-### **Packages**
-
-**_Jupyter_**: the meta research and analysis notebook system
-
-**_NumPy_**: the fundamental package for scientific computing with Python. 
-
-- a powerful N-dimensional array object
-- sophisticated (broadcasting) functions
-- tools for integrating C/C++ and Fortran code
-- useful linear algebra, Fourier transform, and random number capabilities
-- an efficient multi-dimensional container of generic data. 
-- arbitrary data-types can be defined. 
-    - allows NumPy to seamlessly and speedily integrate with a wide variety of databases.
-
-**_Matplotlib_**: Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
-
-- generate plots, histograms, power spectra, bar charts, error charts, scatterplots, etc., with just a few lines of code.
-- Can be used in Python scripts, the Python and IPythonshells, the Jupyter notebook, web application servers, and four graphical user interface toolkits.
-
-**_Pandas_**: provides fast, flexible, and expressive data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive
-
-- Tabular data with heterogeneously-typed columns, as in an SQL table or Excel spreadsheet
-- Ordered and unordered (not necessarily fixed-frequency) time series data.
-- Arbitrary matrix data (homogeneously typed or heterogeneous) with row and column labels
-- Any other form of observational / statistical data sets. The data actually need not be labeled at all to be placed into a pandas data structure
-
-### **Libraries**
-
-**_SciPy_**: provides many user-friendly and efficient numerical routines such as routines for numerical integration and optimization.
-
-**_SymPy_**: for symbolic mathematics. It aims to become a full-featured computer algebra system (CAS) while keeping the code as simple as possible in order to be comprehensible and easily extensible.
-
-### **Modules**
-
-**_Collections_**: Provides the deque() method for rapid ques (showing whats running in backtest)
-
-**_Decimal_**: this class is especially helpful for
-
-- financial applications and other uses which require exact decimal representation
-- control over precision,
-- control over rounding to meet legal or regulatory requirements,
-- tracking of significant decimal places, or
-- applications where the user expects the results to match calculations done by hand.
-
-**_Logging_**: full featured and flexible logging system.
-
-**_Pprint_**: offers more sophisticated control over printing both built-in and user defined objects in a way that is readable by the interpreter.
-
-**_Textwrap_**: formats paragraphs of text to fit a given screen width.
+BIP is simple. Quantitative trading is very secretive and exclusive, since people are trying to make money after all. BIP, however, is a good way for anyone to get their toes wet by trading through Interactive Brokers. It's local, it's clean, and it's fast. Head down to the setup section to see just how little it takes to start backtesting your trading algorithms.
 
 ## Usage
 
-**Note:** This assumes you already have zipline-live w/ IB integration installed on your computer
+The whole process revolves around user security. With BIP, you can store as many algorithms as you want to backtest locally, so no one can tamper with your ideas (if you care about that sort of thing anyways). Build the backtesting environment you want from scratch, completely unique to you, and at the end of the day if you so desire, push it all to a github repository of your choice to keep your work safe in the cloud.
 
-1. Make sure to have [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed
-2. Go to your command line of choice, cd to the 302Backtest directory, and type 'yarn install'
-3. yarn link
-4. You are good to go!
+BIP has a number of simple commands to make the backtesting process as painless as possible. Below are the currently supported commands.
+
+- Add
+    - add an algorithm to the database
+- Remove
+    - remove an algorithm from the database
+- Update
+    - update a specific _id in the database
+- Find
+    - find a specific algorithm by name
+- List
+    - list all current documents in the database
+- Run
+    - run the backtest on a specific algorithm
+- Push
+    - push your work to github ( as of now, this functionality will only work if you have a git environment already set up )
+
+## Setup
+
+**Note:** This assumes you already have zipline-live installed on your computer, as well as mongoDB. The installs are quick, and links can be found [here](http://www.zipline-live.io/tutorial) and [here](https://docs.mongodb.com/manual/installation/) respectively.
+
+1. It's probably important to download the file and unzip it if necessary
+2. Make sure to have [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed, as well as the others mentioned above
+3. Go to your command line of choice, cd to the BIP directory, and type 'yarn install'
+4. type 'yarn link'
+5. You are good to go! Type 'bip --help' and all of bip's capabilities are laid out before you.
 
 ## Credits
 
-**Built by yours truly, 4ked**
+**Built by yours truly**
+
+Quietly awaiting other contributors

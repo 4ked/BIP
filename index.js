@@ -15,7 +15,7 @@ const algo = require('./models/algo');
 const addAlgo = (algorithm) => {
     algo.create(algorithm).then(algorithm => {
         console.info('New Algo Added');
-        client.close();
+        mongoose.connection.close();
     });
 }
 

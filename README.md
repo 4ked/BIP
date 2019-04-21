@@ -1,6 +1,8 @@
-# 302Backtest
+# BIP
 
-Ahoy! This is the Repository for Three(02) Capital's Backtesting System for Interactive Brokers. For an insight into the status of the project, click [here](https://github.com/orgs/three-02/projects/1).
+Ahoy! This platform is designed to be a simple solution for backtesting python trading algorithms via zipline-live with Interactive Brokers integration. While the project is constantly evolving, click [here](https://github.com/orgs/three-02/projects/1) for insight into the status of the project.
+
+It is also worth noting that this is only a command line interface. While there are probably more complex solutions elsewhere, this is as close to pkug-and-play as you can get to test your trading algorithms without the hastle of setting up more complex infrastructure.
 
 ## Contents
 

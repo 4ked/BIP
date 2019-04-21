@@ -37,10 +37,10 @@ BIP has a number of simple commands to make the backtesting process as painless 
     - find a specific algorithm by name
 - List
     - list all current documents in the database
-- Run
+- Run (!! Under Construction !!)
     - run the backtest on a specific algorithm
-- Push
-    - push your work to github ( as of now, this functionality will only work if you have a git environment already set up )
+- Push (!! Under Construction !!)
+    - push your work to github (as of now, this functionality will only work if you have a git environment already set up)
 
 ## Setup
 

@@ -1,8 +1,10 @@
 {
-  "name": "302Backtest",
+  "name": "bip",
   "version": "1.0.0",
   "description": "Algorithm Backtesting CLI for 302 Capital Management",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./commands.js",
   "repository": "https://github.com/4ked/302Backtest.git",
   "author": "4ked <max.goeke0@gmail.com>",
   "license": "MIT",

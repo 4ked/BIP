@@ -71,16 +71,12 @@ Backtesting is the research process of applying a trading strategy idea to histo
 
 ## Usage
 
-Well considering it doesn't work...
-But anyways, here is how it SHOULD work...
+**Note:** This assumes you already have zipline-live w/ IB integration installed on your computer
 
-### Ingesting Data:
-
-zipline ingest -b quantopian-quandl
-
-### Running an algo
-
-zipline run -f ~/documents/302Backtest/demo.py --state-file ~/documents/302Backtest/demo.state --realtime-bar-target ~/documents/302Backtest/realtime-bars/ --broker ib --broker-uri localhost:7496:1232 --bundle quantopian-quandl --data-frequency minute
+1. Make sure to have [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed
+2. Go to your command line of choice, cd to the 302Backtest directory, and type 'yarn install'
+3. yarn link
+4. You are good to go!
 
 ## Credits
 

@@ -72,6 +72,15 @@ Backtesting is the research process of applying a trading strategy idea to histo
 ## Usage
 
 Well considering it doesn't work...
+But anyways, here is how it SHOULD work...
+
+### Ingesting Data:
+
+zipline ingest -b quantopian-quandl
+
+### Running an algo
+
+zipline run -f ~/documents/302Backtest/demo.py --state-file ~/documents/302Backtest/demo.state --realtime-bar-target ~/documents/302Backtest/realtime-bars/ --broker ib --broker-uri localhost:7496:1232 --bundle quantopian-quandl --data-frequency minute
 
 ## Credits
 

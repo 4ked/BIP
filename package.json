@@ -1,0 +1,14 @@
+{
+  "name": "302Backtest",
+  "version": "1.0.0",
+  "description": "Algorithm Backtesting CLI for 302 Capital Management",
+  "main": "index.js",
+  "repository": "https://github.com/4ked/302Backtest.git",
+  "author": "4ked <max.goeke0@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "inquirer": "^6.3.1",
+    "mongoose": "^5.5.2"
+  }
+}

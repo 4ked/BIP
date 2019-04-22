@@ -10,6 +10,7 @@ const db = mongoose.connect('mongodb://localhost:27017/bip', {
 // Import models
 const algo = require('./models/algo');
 
+
 /************************
  *******          *******
  ******* Commands *******
@@ -61,6 +62,18 @@ const listAlgos = () => {
             console.info(algorithms);
             console.info(`${algorithms.length} algos`);
             mongoose.connection.close();
+        });
+}
+
+var exec = require('child_process').exec, child;
+const pushAlgo = (name) => {
+    child = exec('git add . && git commit -m "algo updated" && git push origin master',
+        function (error, stdout, stderr) {
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+            if (error !== null) {
+                 console.log('exec error: ' + error);
+            }
         });
 }
 

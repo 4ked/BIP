@@ -14,6 +14,11 @@ const {
 const questions = [
     {
         type: 'input',
+        name: 'name',
+        message: 'Algorithm Name'
+    },
+    {
+        type: 'input',
         name: 'author',
         message: 'Author First Name'
     },
@@ -66,6 +71,13 @@ program
     .alias('l')
     .description('List all algorithms on file')
     .action(() => listAlgos());
+
+// Push command
+program
+    .command('push <name>')
+    .alias('p')
+    .description('Push an algorithm to github')
+    .action(() => pushAlgo(name));
 
 
 program.parse(process.argv);

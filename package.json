@@ -1,7 +1,7 @@
 {
-  "name": "bip",
+  "name": "jawa",
   "version": "1.0.0",
-  "description": "Algorithm Backtesting CLI for 302 Capital Management",
+  "description": "Algorithm Backtesting CLI for everyone",
   "main": "index.js",
   "preferGlobal": true,
   "bin": "./commands.js",

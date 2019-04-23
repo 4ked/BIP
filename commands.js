@@ -7,7 +7,11 @@ const {
     findAlgo,
     updateAlgo,
     removeAlgo,
-    listAlgos
+    listAlgos,
+    pushAlgo,
+    runAlgo,
+    ingestSet,
+    reportBug
 } = require('./index');
 
 // Algo questions
@@ -15,20 +19,39 @@ const questions = [
     {
         type: 'input',
         name: 'name',
-        message: 'Algorithm Name'
+        message: 'Algorithm Name:'
+    },
+    {
+        type: 'input',
+        name: 'dataset',
+        message: 'Dataset to be used:'
     },
     {
         type: 'input',
         name: 'author',
-        message: 'Author First Name'
+        message: 'Author First Name:'
     },
     {
         type: 'input',
         name: 'dateCreated',
-        message: 'Date Created'
+        message: 'Date Created:'
     }
 ]
 
+const bugQuestions = [
+    {
+        type: 'input',
+        name: 'title',
+        message: 'Title the bug'
+    },
+    {
+        type: 'input',
+        name: 'body',
+        message: 'Describe in detail the issue you are encountering'
+    }
+]
+
+// Building the commands chain
 program
     .version('1.0.0')
     .description('Backtest Management System')
@@ -61,7 +84,7 @@ program
 // Remove command
 program
     .command('remove <_id>')
-    .alias('r')
+    .alias('rm')
     .description('Remove an algorithm')
     .action(_id => removeAlgo(_id));
 
@@ -77,7 +100,30 @@ program
     .command('push <name>')
     .alias('p')
     .description('Push an algorithm to github')
-    .action(() => pushAlgo(name));
+    .action(name => pushAlgo(name));
 
+// Run command
+program
+    .command('run <name>')
+    .alias('r')
+    .description('Run a backtest on an algorithm ')
+    .action(name => runAlgo(name));
+
+// Ingest command
+program
+    .command('ingest <dataset>')
+    .alias('i')
+    .description('Ingest a new dataset')
+    .action((dataset) => ingestSet(dataset))
+
+// Report command
+program
+    .command('report')
+    .alias('rep')
+    .description('Report a bug')
+    .action(() => {
+        // need to alert that user should check issues on github before reporting a new bug
+        prompt(bugQuestions).then(answers => reportBug(answers, bugCount));
+    });
 
 program.parse(process.argv);

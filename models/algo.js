@@ -2,9 +2,11 @@ const mongoose = require('mongoose');
 
 // Algo Schema
 const algoSchema = mongoose.Schema({
+    name: { type: String },
+    dataset: { type: String },
     author: { type: String},
-    dateCreated: { type: Date, default: '1/01/2019' },
-    name: { type: String }
+    description: { type: String },
+    dateCreated: { type: Date, default: '11/11/1111' }
 });
 
 

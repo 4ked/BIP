@@ -1,15 +1,21 @@
 const mongoose = require('mongoose');
 
-// Map global primse to get rid of warning
+// Map global promise to get rid of warning
 mongoose.promise = global.Promise;
 // connect to db
-const db = mongoose.connect('mongodb://localhost:27017/bip', {
+const db = mongoose.connect('mongodb://localhost:27017/jawabs', {
     useNewUrlParser: true
 });
 
 // Import models
 const algo = require('./models/algo');
+const bug = require('./models/bugs');
 
+// Enable Commands
+const execSync = require('child_process').execSync;
+
+// Other vars
+let bugCount = 1;
 
 /************************
  *******          *******
@@ -65,16 +71,32 @@ const listAlgos = () => {
         });
 }
 
-var exec = require('child_process').exec, child;
+// Push algo
 const pushAlgo = (name) => {
-    child = exec('git add . && git commit -m "algo updated" && git push origin master',
-        function (error, stdout, stderr) {
-            console.log('stdout: ' + stdout);
-            console.log('stderr: ' + stderr);
-            if (error !== null) {
-                 console.log('exec error: ' + error);
-            }
-        });
+    execSync(`git add ${name}.py  && git commit -m "${name} updated" && git push origin master`, { encoding: 'utf-8' });
+    console.info(`${name} pushed to github`);
+}
+
+// Run algo
+const runAlgo = (name) => {
+    execSync('ls', { encoding: 'utf-8' });
+    console.info(`${name} backtest complete`);
+}
+
+// Ingest dataset
+const ingestSet = (dataset) => {
+    execSync(`zipline-live ingest ${dataset}`, { encoding: 'utf-8' });
+    console.info(`The ${name} dataset has been ingested`);
+}
+
+// Report a bug
+const reportBug = (Bug) => {
+    bug.create(Bug).then(Bug => {
+        // execSync('git push issue', { encoding: 'utf-8' });
+        bugCount++;
+        console.info(`Bug #${bugCount} Reported`);
+        mongoose.connection.close();
+    });
 }
 
 /************************
@@ -89,5 +111,9 @@ module.exports = {
     findAlgo,
     updateAlgo,
     removeAlgo,
-    listAlgos
+    listAlgos,
+    pushAlgo,
+    runAlgo,
+    ingestSet,
+    reportBug
 }

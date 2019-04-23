@@ -1,13 +1,15 @@
-# BIP
+# JawaBS
 
-Ahoy! This platform is designed to be a simple solution for backtesting python trading algorithms via zipline-live with Interactive Brokers integration. While the project is constantly evolving, click [here](https://github.com/orgs/three-02/projects/1) for insight into the status of the project.
+Just a wicked awesome backtesting system.
+
+This platform is designed to be a simple solution for backtesting python trading algorithms via zipline-live with Interactive Brokers integration. While the project is constantly evolving, click [here](https://github.com/orgs/three-02/projects/1) for insight into the status of the project.
 
 It is also worth noting that this is only a command line interface. While there are probably more complex solutions elsewhere, this is as close to plug-and-play as you can get to test your trading algorithms without the hastle of setting up more complex infrastructure.
 
 ## Contents
 
 - [A Brief Introduction](#so-what-is-backtesting)
-- [What makes BIP different?](#the-basics)
+- [What makes Jawa different?](#the-basics)
 - [Uses and Functions](#usage)
 - [Setup](#setup)
 - [Credits](#credits)
@@ -19,13 +21,13 @@ Backtesting is the research process of applying a trading strategy idea to histo
 
 ## The Basics
 
-BIP is simple. Quantitative trading is very secretive and exclusive, since people are trying to make money after all. BIP, however, is a good way for anyone to get their toes wet by trading through Interactive Brokers. It's local, it's clean, and it's fast. Head down to the setup section to see just how little it takes to start backtesting your trading algorithms.
+Jawa is simple. Quantitative trading is very secretive and exclusive, since people are trying to make money after all. Jawa, however, is a good way for anyone to get their toes wet by trading through Interactive Brokers. It's local, it's clean, and it's fast. Head down to the setup section to see just how little it takes to start backtesting your trading algorithms.
 
 ## Usage
 
-The whole process revolves around user security. With BIP, you can store as many algorithms as you want to backtest locally, so no one can tamper with your ideas (if you care about that sort of thing anyways). Build the backtesting environment you want from scratch, completely unique to you, and at the end of the day if you so desire, push it all to a github repository of your choice to keep your work safe in the cloud.
+The whole process revolves around user security. With Jawa, you can store as many algorithms as you want to backtest locally, so no one can tamper with your ideas (if you care about that sort of thing anyways). Build the backtesting environment you want from scratch, completely unique to you, and at the end of the day if you so desire, push it all to a github repository of your choice to keep your work safe in the cloud.
 
-BIP has a number of simple commands to make the backtesting process as painless as possible. Below are the currently supported commands.
+Jawa has a number of simple commands to make the backtesting process as painless as possible. Below are the currently supported commands.
 
 - Add
     - add an algorithm to the database
@@ -37,10 +39,14 @@ BIP has a number of simple commands to make the backtesting process as painless 
     - find a specific algorithm by name
 - List
     - list all current documents in the database
-- Run (!! Under Construction !!)
+- Run
     - run the backtest on a specific algorithm
-- Push (!! Under Construction !!)
+- Push
     - push your work to github (as of now, this functionality will only work if you have a git environment already set up)
+- Ingest
+    - ingest a new dataset to be used for backtesting
+- Report
+    - report a bug
 
 ## Setup
 
@@ -48,9 +54,9 @@ BIP has a number of simple commands to make the backtesting process as painless 
 
 1. It's probably important to download the file and unzip it if necessary
 2. Make sure to have [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed, as well as the others mentioned above
-3. Go to your command line of choice, cd to the BIP directory, and type 'yarn install'
+3. Go to your command line of choice, cd to the JawaBS directory, and type 'yarn install'
 4. type 'yarn link'
-5. You are good to go! Type 'bip --help' and all of bip's capabilities are laid out before you.
+5. You are good to go! Type 'jawa --help' and all of jawa's capabilities are laid out before you.
 
 ## Credits
 

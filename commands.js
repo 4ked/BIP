@@ -14,6 +14,9 @@ const {
     reportBug
 } = require('./index');
 
+// Enable Commands from terminal intexts
+const execSync = require('child_process').execSync;
+
 // Algo questions
 const questions = [
     {
@@ -51,10 +54,17 @@ const bugQuestions = [
     }
 ]
 
-// Building the commands chain
+// Setup
 program
     .version('1.0.0')
+    .usage("[options] [<command>]")
     .description('Backtest Management System')
+
+/************************
+ *****              *****
+ ***** Command Defs *****
+ *****              *****
+ ***********************/
 
 // Add command
 program
@@ -104,10 +114,10 @@ program
 
 // Run command
 program
-    .command('run <name>')
+    .command('run <name> <dataset>')
     .alias('r')
     .description('Run a backtest on an algorithm ')
-    .action(name => runAlgo(name));
+    .action(name => runAlgo(name, dataset));
 
 // Ingest command
 program
@@ -126,4 +136,15 @@ program
         prompt(bugQuestions).then(answers => reportBug(answers, bugCount));
     });
 
-program.parse(process.argv);
+let result = program.parse(process.argv)
+
+// Check
+if (!program.args.length) {
+        program.help();
+} else {
+    if (program.args.length === 1 && result && result.name() === program.name()) {
+        console.log(`${program.name()}: '${program.args[0]}' is not a valid command. See '${program.name()} --help'`);
+        process.kill(process.pid);
+    }
+
+}

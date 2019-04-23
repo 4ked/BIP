@@ -78,19 +78,19 @@ const pushAlgo = (name) => {
 }
 
 // Run algo
-const runAlgo = (name) => {
-    execSync('ls', { encoding: 'utf-8' });
+const runAlgo = (name, dataset) => {
+    execSync(`zipline run -f ./algos/${name}.py --state-file ./algos/${name}.state --realtime-bar-target ~/zipline-algos/realtime-bars/ --broker ib --broker-uri localhost:7496:1232 --bundle ${dataset} --data-frequency minute`, { encoding: 'utf-8' });
     console.info(`${name} backtest complete`);
 }
 
 // Ingest dataset
 const ingestSet = (dataset) => {
-    execSync(`zipline-live ingest ${dataset}`, { encoding: 'utf-8' });
+    execSync(`zipline-live ingest -b ${dataset}`, { encoding: 'utf-8' });
     console.info(`The ${name} dataset has been ingested`);
 }
 
 // Report a bug
-const reportBug = (Bug) => {
+const reportBug = (Bug, bugCount) => {
     bug.create(Bug).then(Bug => {
         // execSync('git push issue', { encoding: 'utf-8' });
         bugCount++;

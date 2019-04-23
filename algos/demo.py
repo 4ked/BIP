@@ -1,3 +1,11 @@
+'''
+        WARNING
+   This is only a demo 
+   algorithm to test the
+   functional aspects of
+   JawaBS!
+'''
+
 from zipline.api import order, symbol
 
 import logbook

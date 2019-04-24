@@ -4,12 +4,18 @@
   "description": "Algorithm Backtesting CLI for everyone",
   "main": "index.js",
   "preferGlobal": true,
-  "bin": "./commands.js",
-  "repository": "https://github.com/4ked/302Backtest.git",
-  "author": "4ked <max.goeke0@gmail.com>",
+  "bin": "./jawa.js",
+  "repository": "https://github.com/4ked/JawaBS.git",
+  "author": "Max Goeke",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4ked/JawaBS/issues"
+  },
   "dependencies": {
+    "cli-table": "^0.3.1",
+    "colors": "^1.3.3",
     "commander": "^2.20.0",
+    "gridfs-stream": "^1.1.1",
     "inquirer": "^6.3.1",
     "mongoose": "^5.5.2"
   }

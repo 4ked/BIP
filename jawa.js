@@ -136,15 +136,6 @@ program
         prompt(bugQuestions).then(answers => reportBug(answers, bugCount));
     });
 
-let result = program.parse(process.argv)
-
-// Check
-if (!program.args.length) {
-        program.help();
-} else {
-    if (program.args.length === 1 && result && result.name() === program.name()) {
-        console.log(`${program.name()}: '${program.args[0]}' is not a valid command. See '${program.name()} --help'`);
-        process.kill(process.pid);
-    }
-
-}
+program.parse(process.argv)
+      
+    

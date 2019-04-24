@@ -61,7 +61,7 @@ const removeAlgo = (_id) => {
         });
 }
 
-// List algos
+// List algos function
 const listAlgos = () => {
     algo.find()
         .then(algorithms => {

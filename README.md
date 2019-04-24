@@ -2,9 +2,7 @@
 
 Just a wicked awesome backtesting system.
 
-<p align="center">
-  <img src="./source/jawa-juice.gif" alt="Jawa Gif"/>
-</p>
+![Jawa Gif](./source/jawa-juice.gif "Jawa Gif")
 
 ## Contents
 

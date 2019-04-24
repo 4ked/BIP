@@ -2,9 +2,9 @@
 
 Just a wicked awesome backtesting system.
 
-This platform is designed to be a simple solution for backtesting python trading algorithms via zipline-live with Interactive Brokers integration. While the project is constantly evolving, click [here](https://github.com/orgs/three-02/projects/1) for insight into the status of the project.
-
-It is also worth noting that this is only a command line interface. While there are probably more complex solutions elsewhere, this is as close to plug-and-play as you can get to test your trading algorithms without the hastle of setting up more complex infrastructure.
+<p align="center">
+  <img src="./source/jawa-juice.gif" alt="Jawa Gif"/>
+</p>
 
 ## Contents
 
@@ -21,7 +21,9 @@ Backtesting is the research process of applying a trading strategy idea to histo
 
 ## The Basics
 
-Jawa is simple. Quantitative trading is very secretive and exclusive, since people are trying to make money after all. Jawa, however, is a good way for anyone to get their toes wet by trading through Interactive Brokers. It's local, it's clean, and it's fast. Head down to the setup section to see just how little it takes to start backtesting your trading algorithms.
+Jawa is a platform designed to be a simple solution for backtesting python trading algorithms via zipline-live with Interactive Brokers integration. Quantitative trading is very secretive and exclusive, since people are trying to make money after all. Jawa, however, is a good way for anyone to get their toes wet by trading through Interactive Brokers. It's local, it's clean, and it's fast. While the project is constantly evolving, click [here](https://github.com/orgs/three-02/projects/1) for insight into the status of the project.
+
+It is also worth noting that this is only a command line interface. While there are probably more complex solutions elsewhere, this is as close to plug-and-play as you can get to test your trading algorithms without the hastle of setting up more complex infrastructure.
 
 ## Usage
 

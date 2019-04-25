@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const K = require('kleur');
+
 const program = require('commander');
 const { prompt } = require('inquirer');
 const { 
@@ -56,9 +58,9 @@ const bugQuestions = [
 
 // Setup
 program
-    .version('1.0.0')
-    .usage("[options] [<command>]")
-    .description('Backtest Management System')
+    .version(K.yellow('1.0.0'))
+    .usage(K.gray("\n [options] [<command>]"))
+    .description(K.yellow('  Jawa Backtesting CLI'))
 
 /************************
  *****              *****
@@ -68,69 +70,69 @@ program
 
 // Add command
 program
-    .command('add')
-    .alias('a')
-    .description('Add an algorithm')
+    .command(K.white('add   '))
+    .alias(K.green('a'))
+    .description(K.cyan('Add an algorithm'))
     .action(() => {
         prompt(questions).then(answers => addAlgo(answers));
     });
 
 // Find command
 program
-    .command('find <name>')
-    .alias('f')
-    .description('Find an algorithm by name')
+    .command(K.white('find <name> '))
+    .alias(K.green('f'))
+    .description(K.cyan('Find an algorithm by name'))
     .action(name => findAlgo(name));
 
 // Update command
 program
-    .command('update <_id>')
-    .alias('u')
-    .description('Update an algorithm')
+    .command(K.white('update <_id> '))
+    .alias(K.green('u'))
+    .description(K.cyan('Update an algorithm'))
     .action(_id => {
         prompt(questions).then(answers => updateAlgo(_id, answers));
     });
 
 // Remove command
 program
-    .command('remove <_id>')
-    .alias('rm')
-    .description('Remove an algorithm')
+    .command(K.white('remove <_id> '))
+    .alias(K.green('rm'))
+    .description(K.cyan('Remove an algorithm'))
     .action(_id => removeAlgo(_id));
 
 // List command
 program
-    .command('list')
-    .alias('l')
-    .description('List all algorithms on file')
+    .command(K.white('list  '))
+    .alias(K.green('l'))
+    .description(K.cyan('List all algorithms on file'))
     .action(() => listAlgos());
 
 // Push command
 program
-    .command('push <name>')
-    .alias('p')
-    .description('Push an algorithm to github')
+    .command(K.white('push <name> '))
+    .alias(K.green('p'))
+    .description(K.cyan('Push an algorithm to github'))
     .action(name => pushAlgo(name));
 
 // Run command
 program
-    .command('run <name> <dataset>')
-    .alias('r')
-    .description('Run a backtest on an algorithm ')
+    .command(K.white('run <name> <dataset> '))
+    .alias(K.green('r'))
+    .description(K.cyan('Run a backtest on an algorithm'))
     .action(name => runAlgo(name, dataset));
 
 // Ingest command
 program
-    .command('ingest <dataset>')
-    .alias('i')
-    .description('Ingest a new dataset')
+    .command(K.white('ingest <dataset> '))
+    .alias(K.green('i'))
+    .description(K.cyan('Ingest a new dataset'))
     .action((dataset) => ingestSet(dataset))
 
 // Report command
 program
-    .command('report')
-    .alias('rep')
-    .description('Report a bug')
+    .command(K.white('report  '))
+    .alias(K.green('rep'))
+    .description(K.cyan('Report a bug'))
     .action(() => {
         // need to alert that user should check issues on github before reporting a new bug
         prompt(bugQuestions).then(answers => reportBug(answers, bugCount));

@@ -2,7 +2,7 @@
 
 Just a wicked awesome backtesting system.
 
-![Jawa Gif](./source/jawa-juice.gif "Jawa Gif")
+<img src="./source/jawa_display.png" alt="jawa display" height="42%" width="42%"><img src="./source/jawa-juice.gif" alt="jawa gif" height="58%" width="58%">
 
 ## Contents
 

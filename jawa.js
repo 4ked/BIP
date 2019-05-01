@@ -60,7 +60,7 @@ const bugQuestions = [
 program
     .version(K.yellow('1.0.0'))
     .usage(K.gray("\n [options] [<command>]"))
-    .description(K.yellow('  Jawa Backtesting CLI'))
+    .description(K.yellow('   ******************************** \n   *                              *\n   *     Jawa Backtesting CLI     * \n   *                              * \n   ********************************'))
 
 /************************
  *****              *****

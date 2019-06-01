@@ -52,10 +52,10 @@ Jawa has a number of simple commands to make the backtesting process as painless
 
 **Note:** This assumes you already have zipline-live installed on your computer, as well as mongoDB. The installs are quick, and links can be found [here](http://www.zipline-live.io/tutorial) and [here](https://docs.mongodb.com/manual/installation/) respectively.
 
-1. It's probably important to download the file and unzip it if necessary
+1. Download Jawa into the MongoDB directory and unzip the folder if necessary.
 2. Make sure to have [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed, as well as the others mentioned above
 3. Go to your command line of choice, cd to the JawaBS directory, and type 'yarn install'
-4. type 'yarn link'
+4. Type 'yarn link', and then 'yarn link jawa' in every other directory you want to use the cli
 5. You are good to go! Type 'jawa --help' and all of jawa's capabilities are laid out before you.
 
 ## Credits

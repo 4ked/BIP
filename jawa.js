@@ -28,6 +28,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'filename',
+        message: 'Filename:'
+    },
+    {
+        type: 'input',
         name: 'dataset',
         message: 'Dataset to be used:'
     },
